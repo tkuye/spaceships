@@ -16,7 +16,7 @@ import time
 # Initialize menu
 pygame.init()
 window = pygame.display.set_mode((1200, 1200))
-menu = pygame_menu.Menu(600, 600, "Spaceships", theme=pygame_menu.themes.THEME_DARK) 
+menu = pygame_menu.Menu("Spaceships", 600, 600, theme=pygame_menu.themes.THEME_DARK) 
 scores = []
 
 # Class for the falling of the meteors within the game
@@ -232,7 +232,7 @@ def main():
             if meteor.hit(space_rect):
                 # put new score on the menu
                 scorenum = ship.score
-                score = menu.add_label("Your Score: " + str(scorenum), font_size=30, key=1)
+                score = menu.add.label(f"Your Score: {scorenum}" , font_size=30)
                 scores.append(score)
                 # calls widget remove function to remove previous score from menu
                 widget_remove(menu, scores)
@@ -247,12 +247,12 @@ def main():
         pygame.display.flip()
 
 # add the menu buttons to play and title 
-menu.add_label("CLICK TO PLAY", font_size=50)
+menu.add.label("CLICK TO PLAY", font_size=50)
 # clicking calls main function and initializes everything
 
-menu.add_button('Play', main)
+menu.add.button('Play', main)
 # also add quit function
-menu.add_button("Quit", pygame_menu.events.EXIT)
+menu.add.button("Quit", pygame_menu.events.EXIT)
 
 # needed to keep menu open
 menu.mainloop(window)

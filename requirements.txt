@@ -1,0 +1,3 @@
+# in order to specify the correct versions
+pygame==2.0.1
+pygame-menu==4.1.4
