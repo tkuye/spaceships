@@ -12,5 +12,5 @@ Here is a demo displaying as to how the game is played.
 
 
 
-https://user-images.githubusercontent.com/72341152/135499866-943fdfee-e533-4955-8e7a-84ba43b897e7.mov
+https://user-images.githubusercontent.com/72341152/135500246-ea33be7f-3af2-41d8-8b3a-e25bd925d719.mov
 
